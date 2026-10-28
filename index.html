@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>João Materiais de Construção — Do Alicerce ao Acabamento</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Folha de Estilos Externa -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon">🏗️</span>
+        <div class="logo-text">
+          JOÃO
+          <span>MATERIAIS DE CONSTRUÇÃO</span>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#categorias">Categorias</a></li>
+          <li><a href="#calculadora">Calculadora</a></li>
+          <li><a href="#ofertas">Ofertas da Semana</a></li>
+          <li><a href="#orcamento">Orçamento</a></li>
+        </ul>
+      </nav>
+      <a href="#orcamento" class="btn btn-primary">Pedir Orçamento</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Tudo para a sua obra, <span>do alicerce ao acabamento</span></h1>
+        <p>Mais de 25 anos atendendo a nossa região com entrega rápida no canteiro de obras, preço justo e o melhor atendimento do João!</p>
+        <div class="hero-buttons">
+          <a href="#orcamento" class="btn btn-primary">Solicitar Cotação no WhatsApp</a>
+          <a href="#categorias" class="btn btn-secondary">Ver Catálogo</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Materiais de construção e ferramentas no canteiro de obras">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS / PRODUTOS -->
+  <section id="categorias" class="section">
+    <div class="section-title">
+      <h2>O que você precisa hoje?</h2>
+      <p>Estoque completo para construção, reforma ou pequenos reparos</p>
+    </div>
+    <div class="services-grid">
+      <article class="card">
+        <span class="card-icon">🧱</span>
+        <h3>Bruto & Estrutura</h3>
+        <p>Cimento, tijolos, areia, brita, colunas de ferro, vigas e argamassa para iniciar sua obra com fundação sólida.</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon">🚰</span>
+        <h3>Hidráulica & Tubos</h3>
+        <p>Tubos PVC, conexões, caixas d'água, registros, torneiras e conexões de alta resistência para esgoto e água quente.</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon">⚡</span>
+        <h3>Elétrica & Iluminação</h3>
+        <p>Fios e cabos reforçados, disjuntores, tomadas, painéis LED, conduítes e materiais para fiação segura.</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon">🎨</span>
+        <h3>Tintas & Acabamento</h3>
+        <p>Tintas acrílicas, seladores, pincéis, pisos, porcelanatos e rejunte para dar o toque final na sua casa.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CALCULADORA DE TIJOLOS -->
+  <section id="calculadora" class="section section-calc">
+    <div class="section-title">
+      <h2>🧮 Calculadora Rápida de Tijolos</h2>
+      <p>Estime a quantidade aproximada de tijolos baianos (6 furos) necessários para sua parede</p>
+    </div>
+    <div class="calc-box">
+      <div class="calc-grid">
+        <div class="form-group">
+          <label for="largura-parede">Largura da Parede (metros)</label>
+          <input type="number" id="largura-parede" placeholder="Ex: 5" min="0" step="0.1">
+        </div>
+        <div class="form-group">
+          <label for="altura-parede">Altura da Parede (metros)</label>
+          <input type="number" id="altura-parede" placeholder="Ex: 2.8" min="0" step="0.1">
+        </div>
+      </div>
+      <button type="button" onclick="calcularTijolos()" class="btn btn-secondary btn-full">Calcular Quantidade</button>
+      
+      <div class="calc-result" id="resultado-calc">
+        <p class="txt-muted">Preencha as medidas acima para calcular.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTAS DA SEMANA (TABELA) -->
+  <section id="ofertas" class="section">
+    <div class="section-title">
+      <h2>🔥 Tabela de Ofertas da Semana</h2>
+      <p>Preços especiais válidos enquanto durarem os estoques</p>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Unidade / Embalagem</th>
+            <th>Preço Especial</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cimento CP-II 50kg (Votoran / Itaú)</td>
+            <td>Saco 50kg</td>
+            <td><strong>R$ 32,90</strong></td>
+            <td><span class="tag-oferta">Em Estoque</span></td>
+          </tr>
+          <tr>
+            <td>Tijolo Baiano 6 Furos (9x14x19cm)</td>
+            <td>Milheiro (1.000 un)</td>
+            <td><strong>R$ 890,00</strong></td>
+            <td><span class="tag-oferta">Destaque</span></td>
+          </tr>
+          <tr>
+            <td>Argamassa AC-I Interior 20kg</td>
+            <td>Saco 20kg</td>
+            <td><strong>R$ 14,50</strong></td>
+            <td><span class="tag-oferta">Em Estoque</span></td>
+          </tr>
+          <tr>
+            <td>Tinta Látex Branca Neocor 18L</td>
+            <td>Lata 18 Litros</td>
+            <td><strong>R$ 119,00</strong></td>
+            <td><span class="tag-oferta">Poucas Unidades</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO DE ORÇAMENTO -->
+  <section id="orcamento" class="section">
+    <div class="contact-container">
+      <div>
+        <div class="section-title title-left">
+          <h2>Faça sua Cotação Direta</h2>
+          <p>Envie sua lista de materiais que respondemos rapidinho no seu WhatsApp com os melhores preços e frete grátis para a região!</p>
+        </div>
+        <p class="info-item">📍 <strong>Endereço:</strong> Av. dos Construtores, 450 — Distrito Industrial</p>
+        <p class="info-item">📞 <strong>Telefone / WhatsApp:</strong> (11) 98888-7777</p>
+        <p class="info-item">⏱️ <strong>Atendimento:</strong> Seg. a Sex: 07h às 18h | Sáb: 07h às 13h</p>
+      </div>
+
+      <form class="contact-form" onsubmit="alert('Obrigado! João e sua equipe entrarão em contato em instantes.'); return false;">
+        <div class="form-group">
+          <label for="nome">Seu Nome</label>
+          <input type="text" id="nome" placeholder="Ex: Roberto Silva" required>
+        </div>
+
+        <div class="form-group">
+          <label for="whatsapp">Seu WhatsApp</label>
+          <input type="tel" id="whatsapp" placeholder="(00) 00000-0000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tipo-obra">Etapa da Obra</label>
+          <select id="tipo-obra">
+            <option value="bruto">Fundação / Estrutura Bruta</option>
+            <option value="alvenaria">Paredes / Alvenaria</option>
+            <option value="eletrica-hidraulica">Elétrica ou Hidráulica</option>
+            <option value="acabamento">Piso / Pintura / Acabamento</option>
+            <option value="reforma">Pequena Reforma</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="lista-materiais">Lista de Materiais Desejados</label>
+          <textarea id="lista-materiais" rows="4" placeholder="Ex: 20 sacos de cimento, 500 tijolos, 2 sacos de areia..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Enviar Lista ao João</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>🏗️ João Materiais</h4>
+        <p>Tradição, honestidade e entrega pontual para a sua construção nunca parar.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <a href="#categorias">Categorias</a>
+        <a href="#calculadora">Calculadora de Tijolos</a>
+        <a href="#ofertas">Ofertas da Semana</a>
+        <a href="#orcamento">Pedir Orçamento</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atendimento Local</h4>
+        <p>Atendemos construtores, pedreiros, engenheiros e donos de casa em toda a cidade.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 João Materiais de Construção. Todos os direitos reservados. Redesign Front-End Profissional.</p>
+    </div>
+  </footer>
+
+  <!-- BANNER DE AVISO DE COOKIES -->
+  <div id="banner-cookies" class="banner-cookies">
+    <p>
+      Utilizamos cookies para personalizar sua experiência no site do João. Ao continuar navegando, você concorda com a nossa política.
+    </p>
+    <button id="btn-aceitar-cookies" class="btn-cookies">Entendi e Aceito</button>
+  </div>
+
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
